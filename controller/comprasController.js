@@ -3,7 +3,6 @@ const Compras = require ('../models/Compras');
 
 // funcion para agregar compras hechas CREATE
 exports.addCompras = async(req, res) => {
-
     try {
         let compraa;
         compraa = new Compras(req.body);
@@ -11,7 +10,7 @@ exports.addCompras = async(req, res) => {
         res.send(compraa);
     } catch (error) {
         console.log(error);
-        res.status(500).send('Error al cargar el producto');
+        res.status(500).send('Error al cargar las compras');
     }
 
 }
@@ -22,7 +21,7 @@ exports.seeCompras = async(req, res) =>{
         res.json(comp);
       } catch (error) {
         console.log(error)
-        res.status(502).send("Error al mostrar los productos.");
+        res.status(502).send("Error al mostrar las compras.");
       }
 };
 //funcion para mostrar una compra en especifico
