@@ -12,10 +12,9 @@ app.use(express.json({extended: true}));
 app.use('/api/auth',require("../routes/authe"));
 app.use('/api/usuarios', require("../routes/usuarios"));
 
-
-
 app.use('/api/clientes', require('../routes/cliente'));
 app.use('/api/compras', require('../routes/compra'));
+app.use('/api/citas', require('../routes/cita'));
 
 app.get('/',(req,res)=>{
     res.send("Bienvenido desde el navegador");
